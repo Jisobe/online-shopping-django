@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Craigslist: Add Post{% endblock title %}
+
+{% block header %}Add Post to {{ category.name }} {% endblock header %}
+
+{% block main-body %}
+
+<form method='POST'>
+  {% csrf_token %}
+  <label for='post-name'>Post name:</label>
+  <input name='post-name' placeholder='enter post name'/>
+  <label for='post-detail'>Post description:</label>
+  <input name='post-detail' placeholder='enter post description'/>
+  <label for='post-price'>Price:</label>
+  <input type='number' step= '0.01' name='post-price' value = '0.00' placeholder='enter post price' required/>
+  <label for='post-contact'>Your contact information:</label>
+  <input type='eamil' name='post-contact' placeholder='enter post contact email'/>
+  <label for='post-picture'>Select Image:</label>
+  <input type ='file' name='post-picture' placeholder='enter post picture' accept='image/*'/>
+  <label for='post-category'>Category: {{ category.name }}</label>
+  <input type='hidden' name='post-category' value={{ category.id }} />
+  <input type='hidden' name='add' value=''/>
+  <button type='submit'>Add Post</button>
+  <br/>
+  {% if error%}
+  <p>There was an error when submitting your post</p>
+  {% for key, value in error.items %}
+  <li>{{ key }}, {{value}}</li>
+  {% endfor %}
+  {% endif %}
+</form>
+
+<a href="{% url 'category-detail' category.id %}"><button>Back to {{category.name}}</button></a>
+
+{% endblock main-body %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Craigslist: {{ post.name }} {% endblock title %}
+
+{% block header %} {{ post.name }} {% endblock header %}
+
+{% block main-body %}
+
+<span>
+  <div> Post date: {{ post.post_date}}</div>
+  <div> Last Activity: {{ post.last_activity}}</div>
+</span>
+<div> Description: {{ post.description }} </div>
+<div> {{ post.picture }} </div>
+<div> Price: {{ post.price }} </div>
+<div> Contact: {{ post.contact_info }} </div>
+
+<a href="{% url 'category-detail' category.id%}"><button>Back to {{category.name}}</button></a>
+<a href="{% url 'edit-post' category.id post.id  %}"><button>Edit Post</button></a>
+
+{% endblock main-body %}

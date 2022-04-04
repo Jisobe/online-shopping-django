@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Craigslist: {{ category.name }} {% endblock title %}
+
+{% block header %} {{ category.name }} {% endblock header %}
+
+{% block main-body %}
+
+<div> {{ category.description }} </div>
+
+<ol>
+{% for post in category.posts.all|dictsort:'id' %}
+<li><a href="{% url 'post-detail' category.id post.id %}">{{post.name}}</a></li>
+{% endfor %}
+</ol>
+{% comment %} 
+<a href="{% url 'add-post-cat' category.id %}">Add Post</a>
+<a href="{% url 'edit-category' category.id %}">Edit Category</a> {% endcomment %}
+
+<a href="{% url 'add-post-cat' category.id %}"><button>Add Post</button></a>
+<a href="{% url 'edit-category' category.id %}"><button>Edit Category</button></a>
+
+
+{% comment %} <form method='POST'>
+  {% csrf_token %}
+  <label for='category'>New Category:</label>
+  <input name='category-name' placeholder='enter category name'/>
+  <input name='category-detail' placeholder='enter category detail'/>
+  <input type='hidden' name='add' value=''/>
+  <button type='submit'>Add Category</button>
+  <br/>
+  {% if error %}
+  <p>There was an error when submitting your category</p>
+  {% for key, value in error.items %}
+  <li>{{ key }}, {{value}}</li>
+  {% endfor %}
+  {% endif %}
+</form> {% endcomment %}
+
+{% endblock main-body %}

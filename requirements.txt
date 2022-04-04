@@ -1,0 +1,9 @@
+asgiref==3.5.0
+Babel==2.9.1
+Django==4.0.3
+django-money==2.1.1
+Pillow==9.1.0
+psycopg2-binary==2.9.3
+py-moneyed==1.2
+pytz==2022.1
+sqlparse==0.4.2

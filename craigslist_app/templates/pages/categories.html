@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Craigslist{% endblock title %}
+
+{% block header %}Categories{% endblock header %}
+
+{% block main-body %}
+
+<ol>
+  {% for category in category_names  %}
+  <li><a href='{% url "category-detail" category.id %}'>{{category.name}}</a></li>
+  {% endfor %}
+</ol>
+
+<a href="{% url 'add-category' %}"><button>Add Category</button></a>
+
+{% endblock main-body %}

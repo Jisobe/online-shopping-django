@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Craigslist: Add Category{% endblock title %}
+
+{% block header %}Add Category{% endblock header %}
+
+{% block main-body %}
+
+<form method='POST'>
+  {% csrf_token %}
+  <label for='category'>New Category:</label>
+  <input name='category-name' placeholder='enter category name'/>
+  <input name='category-detail' placeholder='enter category detail'/>
+  <input type='hidden' name='add' value=''/>
+  <button type='submit'>Add Category</button>
+  <br/>
+  {% if error %}
+  <p>There was an error when submitting your category</p>
+  {% for key, value in error.items %}
+  <li>{{ key }}, {{value}}</li>
+  {% endfor %}
+  {% endif %}
+</form>
+
+<a href="{% url 'categories' %}"><button>Back to Categories</button></a>
+
+{% endblock main-body %}

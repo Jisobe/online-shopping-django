@@ -1,0 +1,359 @@
+[
+{
+  "model": "craigslist_app.category",
+  "pk": 1,
+  "fields": {
+    "name": "Social",
+    "description": "Meet local people for social events"
+  }
+},
+{
+  "model": "craigslist_app.category",
+  "pk": 2,
+  "fields": {
+    "name": "Real Estate",
+    "description": "Buy or rent homes, apartments, condos, etc"
+  }
+},
+{
+  "model": "craigslist_app.category",
+  "pk": 3,
+  "fields": {
+    "name": "Vehicles",
+    "description": "buy, sell, or rent cars, trucks, motorcycles, etc"
+  }
+},
+{
+  "model": "craigslist_app.category",
+  "pk": 4,
+  "fields": {
+    "name": "Household goods",
+    "description": "buy and sell household items"
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 1,
+  "fields": {
+    "name": "Motorhome for Sale",
+    "description": "5th wheel motorhome in great condition for sale. Take your life on the road",
+    "price_currency": "USD",
+    "price": "50000.00",
+    "contact_info": "maryS@hotmail.com",
+    "picture": "None/5th_wheel.jpeg",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T04:25:35.838Z",
+    "category": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 3,
+  "fields": {
+    "name": "Basketball game",
+    "description": "Looking for a pick-up game at the local YMCA tonight at 9",
+    "price_currency": "XYZ",
+    "price": null,
+    "contact_info": "spacejam100@gmail.com",
+    "picture": "",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T04:32:27.752Z",
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 4,
+  "fields": {
+    "name": "Bar night",
+    "description": "Just moved to town and am looking for some new friends. Wanting to go out to some bars on Friday",
+    "price_currency": "XYZ",
+    "price": null,
+    "contact_info": "janedo321@yahoo.com",
+    "picture": "",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T04:34:13.810Z",
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 5,
+  "fields": {
+    "name": "Knitting club",
+    "description": "I have been knitting for a couple of years and am wanting to create a club for beginners to learn from more experienced knitters",
+    "price_currency": "XYZ",
+    "price": null,
+    "contact_info": "knitting_queen6@gmail.com",
+    "picture": "",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T04:36:02.686Z",
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 6,
+  "fields": {
+    "name": "Cards/Poker night",
+    "description": "need a couple more players for a poker night on Saturday. Shoot me an email to join",
+    "price_currency": "XYZ",
+    "price": null,
+    "contact_info": "john_smith007@hotmail.com",
+    "picture": "",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T04:37:10.099Z",
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 7,
+  "fields": {
+    "name": "4 bdrm home for Rent",
+    "description": "Beautiful 4 bed 2 bath Ranch style home for rent. Available starting 4/15/22. $1,500/mo. Please send me an email for more info.",
+    "price_currency": "USD",
+    "price": "1500.00",
+    "contact_info": "bethrealty@realtor.com",
+    "picture": "",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T04:39:17.756Z",
+    "category": [
+      2
+    ]
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 8,
+  "fields": {
+    "name": "Room for rent",
+    "description": "10ft X 12ft room in a 3 bedroom 2 bathroom house available for rent. Fully equipped kitchen and large backyard. Responsible for 1/3 of utility cost each month in addition to rent",
+    "price_currency": "USD",
+    "price": "700.00",
+    "contact_info": "harry_potter@gmail.com",
+    "picture": "",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T04:42:05.142Z",
+    "category": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 9,
+  "fields": {
+    "name": "Condo for sale",
+    "description": "3 bed 1 bath condo in an amazing community. Community pool and gym available. Kitchen come fully equipped.",
+    "price_currency": "USD",
+    "price": "100000.00",
+    "contact_info": "nancyDrew@mailto.com",
+    "picture": "",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T04:45:06.955Z",
+    "category": [
+      2
+    ]
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 10,
+  "fields": {
+    "name": "Home for Sale",
+    "description": "3 beds 1 bath. Large kitchen open to living room. Large main bedroom with ensuite bathroom and walk-in closet.",
+    "price_currency": "USD",
+    "price": "256000.00",
+    "contact_info": "wesellhomes@sellhomes.com",
+    "picture": "",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T04:46:39.653Z",
+    "category": [
+      2
+    ]
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 11,
+  "fields": {
+    "name": "Car for sale",
+    "description": "2010 Toyota Camry for sale. Car is in great condition with new tires. I am the original owner and have gotten oil changes/maintenance check as recommended.",
+    "price_currency": "USD",
+    "price": "10000.00",
+    "contact_info": "ronWeasley@gmail.com",
+    "picture": "None/camry.jpeg",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T04:49:30.496Z",
+    "category": [
+      3
+    ]
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 12,
+  "fields": {
+    "name": "Motorcyle",
+    "description": "It has two wheels with a sidecar and runs",
+    "price_currency": "USD",
+    "price": "2500.00",
+    "contact_info": "rhagrid@hogwarts.com",
+    "picture": "",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T05:03:52.973Z",
+    "category": [
+      3
+    ]
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 13,
+  "fields": {
+    "name": "For sale-Toyota Tacoma",
+    "description": "2015 Toyota Tacoma PreRunner with roof rack. Tires are about 1 year old. Great for off-roading",
+    "price_currency": "USD",
+    "price": "21000.00",
+    "contact_info": "joeyLeBlanc@yahoo.com",
+    "picture": "",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T05:07:36.326Z",
+    "category": [
+      3
+    ]
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 14,
+  "fields": {
+    "name": "looking to buy a small SUV",
+    "description": "I'm looking to buy a small SUV(about the size of a Rav4). Needs to run with no major damage. Willing to spend $15,000.",
+    "price_currency": "XYZ",
+    "price": null,
+    "contact_info": "busyMom_x2@hotmail.com",
+    "picture": "",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T05:10:19.359Z",
+    "category": [
+      3
+    ]
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 15,
+  "fields": {
+    "name": "pots and pans",
+    "description": "Full set of pots and pans mostly Tfal. Including a stock pot, 10in skillet, 5in skillet, medium sauce pan, and small sauce pan.",
+    "price_currency": "USD",
+    "price": "20.00",
+    "contact_info": "gordon_ramsey@gmail.com",
+    "picture": "",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T05:13:30.974Z",
+    "category": [
+      4
+    ]
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 16,
+  "fields": {
+    "name": "bike",
+    "description": "Selling a men's 26in mountain bike. Great Condition",
+    "price_currency": "USD",
+    "price": "45.00",
+    "contact_info": "jeff.Bezos@yahoo.com",
+    "picture": "",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T05:14:50.870Z",
+    "category": [
+      4
+    ]
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 17,
+  "fields": {
+    "name": "sound bar",
+    "description": "36 in Vizio sound bar for TV",
+    "price_currency": "USD",
+    "price": "25.00",
+    "contact_info": "jim.rose@gmail.com",
+    "picture": "",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T05:17:41.733Z",
+    "category": [
+      4
+    ]
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 18,
+  "fields": {
+    "name": "Need a couch",
+    "description": "I need a medium size couch preferable grey but I'm open to anything at this point. Willing to pay up to $200",
+    "price_currency": "XYZ",
+    "price": null,
+    "contact_info": "molly_weasley@yahoo.com",
+    "picture": "",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T05:23:13.647Z",
+    "category": [
+      4
+    ]
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 19,
+  "fields": {
+    "name": "circular saw",
+    "description": "Rigid brand circular saw about 4 years old. Needs a new blade but works great otherwise.",
+    "price_currency": "XUA",
+    "price": "22.00",
+    "contact_info": "dracoMalfoy@hogwarts.com",
+    "picture": "",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T05:26:30.755Z",
+    "category": [
+      4
+    ]
+  }
+},
+{
+  "model": "craigslist_app.post",
+  "pk": 20,
+  "fields": {
+    "name": "Misc Candles",
+    "description": "15 candles of various sizes and scents",
+    "price_currency": "XUA",
+    "price": "10.00",
+    "contact_info": "sybil_trelawney@divination.com",
+    "picture": "",
+    "post_date": "2022-04-03",
+    "last_activity": "2022-04-03T05:29:20.855Z",
+    "category": [
+      4
+    ]
+  }
+}
+]
