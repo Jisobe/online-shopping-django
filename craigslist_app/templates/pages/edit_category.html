@@ -1,38 +1,22 @@
 {% extends 'base.html' %}
 
-{% block title %}Craigslist: {{ category.name }} {% endblock title %}
+{% block title %}Craigslist: {{ tyoe_of_request }} {% endblock title %}
 
-{% block header %} Edit {{ category.name }} {% endblock header %}
+{% block header %}  {% endblock header %}
 
 {% block main-body %}
 
-<div> You are currently editing the {{ category.name}} category </div>
-
-
-<form method='POST'>
+<h2> {{type_of_request}} Category </h2>
+<form method='POST' class ='category-form'>
   {% csrf_token %}
-  <input type='hidden' name='category_id' value={{ category.id }}/>
-  <input name='name' value={{category.name}}/>
-  <label for='category'>Category description</label>
-  <input name='detail' value={{category.description}}/>
-  <input type='hidden' name='add' value=''/>
-  <button type='submit'>Submit Changes</button>
-  <br/>
-  {% if error %}
-  <p>There was an error when submitting your category</p>
-  {% for key, value in error.items %}
-  <li>{{ key }}, {{value}}</li>
-  {% endfor %}
-  {% endif %}
+  {{ category.as_p }}
+  <button type='submit'>Save Category</button>
 </form>
 
-<form method='POST'>
+<form method='POST' id='delete'>
   {% csrf_token %}
   <input type='hidden' name='delete_category' value={{ category.id }} />
   <button type='submit'>Delete Category</button>
 </form>
-
-
-
 
 {% endblock main-body %}

@@ -1,45 +1,17 @@
 {% extends 'base.html' %}
 
-{% block title %}Craigslist: {{ post.name }} {% endblock title %}
-
-{% block header %} Edit {{ post.name }} {% endblock header %}
+{% block title %}Craigslist: {{ type_of_request }} {% endblock title %}
 
 {% block main-body %}
 
-<div> You are currently editing the {{ post.name }} category </div>
-
-
-<form method='POST'>
+<h2> {{type_of_request}} Post </h2>
+<form method='POST' class ='post-form'>
   {% csrf_token %}
-  <input type='hidden' name='post_id' value={{ post.id }}/>
-  <label for='post_name'>Name</label>
-  <input name='post_name' value={{post.name}}/>
-  <label for='post_detail'>Description</label>
-  <input name='post_detail' value={{post.description}}/>
-  <label for='post_price'>Price</label>
-  <input type='number' step='0.01' name='post_price' value={{post.price}} required/>
-  <label for='post_contact'>Your contact info</label>
-  <input type='email' name='post_contact' value={{post.contact_info}}/>
-  <label for='post_picture'>Image</label>
-  <input type='file' name='post_picture' value={{post.picture}} accept='image/*'/>
-  <label for='post_category'>Category</label>
-  <select name='post_category'>
-    {% for category in categories %}
-    <option value={{category.id}}>{{category.name}}</option>
-    {% endfor %}
-  </select>
-  <input type='hidden' name='add' value=''/>
-  <button type='submit'>Submit Changes</button>
-  <br/>
-  {% if error %}
-  <p>There was an error when submitting your category</p>
-  {% for key, value in error.items %}
-  <li>{{ key }}, {{value}}</li>
-  {% endfor %}
-  {% endif %}
+  {{ post.as_p }}
+  <button type='submit'>Save Post</button>
 </form>
 
-<form method='POST'>
+<form method='POST' id='delete'>
   {% csrf_token %}
   <input type='hidden' name='delete_post' value={{ post.id }} />
   <button type='submit'>Delete Post</button>

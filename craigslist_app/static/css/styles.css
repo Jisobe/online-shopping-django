@@ -1,0 +1,55 @@
+#header{
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bolder;
+}
+
+#main-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(23, 23, 183)
+}
+
+a:hover{
+  color: black;
+}
+
+button {
+  background-color: dimgray;
+  border: none;
+  color: black;
+  margin: 2px;
+}
+
+button:hover{
+  background-color: black;
+  color: white;
+}
+
+.category-form{
+  display: contents;
+}
+
+.post-form{
+  display: contents;
+}
+
+#id_price_1{
+  width: 150px;
+}
+
+#dates{
+  display: flex;
+  gap: 20px;
+  font-size: larger;
+}

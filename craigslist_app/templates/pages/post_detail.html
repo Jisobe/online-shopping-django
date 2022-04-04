@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Craigslist: {{ post.name }} {% endblock title %}
 
@@ -6,16 +7,20 @@
 
 {% block main-body %}
 
-<span>
+<span id = 'dates'>
   <div> Post date: {{ post.post_date}}</div>
   <div> Last Activity: {{ post.last_activity}}</div>
 </span>
 <div> Description: {{ post.description }} </div>
-<div> {{ post.picture }} </div>
+{% if post.picture %}
+<div> 
+  {% static 'img/{$ post.picture $}' %} 
+</div>
+{% endif %}
 <div> Price: {{ post.price }} </div>
 <div> Contact: {{ post.contact_info }} </div>
 
-<a href="{% url 'category-detail' category.id%}"><button>Back to {{category.name}}</button></a>
-<a href="{% url 'edit-post' category.id post.id  %}"><button>Edit Post</button></a>
+<div><a href="{% url 'category-detail' category.id%}"><button>Back to {{category.name}}</button></a></div>
+<div><a href="{% url 'edit-post' category.id post.id  %}"><button>Edit Post</button></a></div>
 
 {% endblock main-body %}

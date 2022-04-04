@@ -6,15 +6,15 @@
 
 {% block main-body %}
 
-{{ category.id }}
-
 <ol>
   {% for post in posts  %}
-  {{post.category}}
-  {% comment %} <li><a href="{% url 'post-detail' post.id %}">{{post.name}}</a></li> {% endcomment %}
+  <li><a href="{% url 'post-detail' category_id=1 post_id=post.id %}">{{post.name}}</a></li>
   {% endfor %}
 </ol>
 
-<div><a href='{% url "add-post" %}'>Add Post</a></div>
+{% comment %} <div class = 'button'><a href='{% url "add-post" %}'>Add Post</a></div> {% endcomment %}
+
+<a href="{% url 'add-post' %}"><button>Add Post</button></a>
 
 {% endblock main-body %}
+

@@ -6,20 +6,11 @@
 
 {% block main-body %}
 
-<form method='POST'>
+<h2> {{type_of_request}} Category </h2>
+<form method='POST' class ='category-form'>
   {% csrf_token %}
-  <label for='category'>New Category:</label>
-  <input name='category-name' placeholder='enter category name'/>
-  <input name='category-detail' placeholder='enter category detail'/>
-  <input type='hidden' name='add' value=''/>
-  <button type='submit'>Add Category</button>
-  <br/>
-  {% if error %}
-  <p>There was an error when submitting your category</p>
-  {% for key, value in error.items %}
-  <li>{{ key }}, {{value}}</li>
-  {% endfor %}
-  {% endif %}
+  {{ category.as_p }}
+  <button type='submit'>Save Category</button>
 </form>
 
 <a href="{% url 'categories' %}"><button>Back to Categories</button></a>
