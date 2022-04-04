@@ -1,13 +1,23 @@
-
-
-
-
-
-
-
+## Actions to start site
+- start postgres in terminal
+- clone repository and cd into it
+- create and start venv 
+  `python -m venv venv`
+  `source venv/bin/activate`
+- install requirements
+  `pip install -r requirements.txt`
+- create the database
+  `createdb craigslist_db`
+- migrate
+  `python manage.py migrate`
+- load data
+  `python manage.py loaddata craigslist2.json`
+- start server
+  `python manage.py runserver`
+- load main page
+  - type `/categories` after port in browser bar
 # Assessment 4: Django
 - **Craigslist Jr**
-
 ## Important Grading Information
 - Make sure you read the [Assessment-4 Grading Rubric](https://docs.google.com/spreadsheets/d/11bCD5tstmbPhq8eqQD6NswuFOhiBLEBZv56ujREpPtQ/edit?usp=sharing).
   - Django Front-End (50%)
@@ -16,16 +26,13 @@
 - If you fail the assessment, you have can retake it once to improve your score. For this assessment... 
   - 5% penalty: If you complete and submit the retake within **one week** of receiving your grade. 
   - 10% penalty: If you complete and submit the retake afterwards.
-
 ## Rules / Process
 - This test is fully open notes and open Google, but is not to be completed with the help of other students/individuals
 - Do not open a pull request against this repository.
-
 ## Requirements
 - This assessment must be completed using Django. 
 - You must use a PostgreSQL for your database.
   - Make sure you provide some seed data using Django fixtures 
-
 ## Challenge
 Everyone loves going on Craigslist to find interesting people and interesting items. The joy of Craigslist is that it doesn't upgrade itself to stay up to date with the times - it's the same old Craigslist that everyone knows and loves. The core schema has also remained relatively unchanged over the years. Today, you will build a basic Craigslist CRUD app with nested routes. We will call this site: Craigslist Junior.
 
